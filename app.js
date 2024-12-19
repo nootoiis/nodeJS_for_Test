@@ -162,6 +162,10 @@ app.use("/api/v1/activity", v1ActivityRouter);
 const productRoutes = require("./routes/v1/productRoutes");
 app.use("/api/v1/products", productRoutes);
 
+//? Order Endpoints
+const v1OrderRouter = require("./routes/v1/orderRoutes");
+app.use("/api/v1/orders", v1OrderRouter);
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
